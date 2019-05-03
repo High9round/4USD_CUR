@@ -5,10 +5,179 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:_4USD_CUR"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="4딸라" Height="450" Width="395.272" Loaded="Window_Loaded">
     <Grid>
-        <Label Content="4USD TO...." HorizontalAlignment="Left" Margin="55,294,0,0" VerticalAlignment="Top"/>
-        <ComboBox HorizontalAlignment="Left" Margin="147,298,0,0" VerticalAlignment="Top" Width="120"/>
+        <Label Content="4USD TO...." HorizontalAlignment="Left" Margin="6,294,0,0" VerticalAlignment="Top"/>
+        <ComboBox x:Name="cboCurrency" HorizontalAlignment="Left" Margin="98,298,0,0" VerticalAlignment="Top" Width="62" Height="20" SelectedIndex="0">
+            <ComboBoxItem Content="AED" />
+            <ComboBoxItem Content="AFN" />
+            <ComboBoxItem Content="ALL" />
+            <ComboBoxItem Content="AMD" />
+            <ComboBoxItem Content="ANG" />
+            <ComboBoxItem Content="AOA" />
+            <ComboBoxItem Content="ARS" />
+            <ComboBoxItem Content="AUD" />
+            <ComboBoxItem Content="AWG" />
+            <ComboBoxItem Content="AZN" />
+            <ComboBoxItem Content="BAM" />
+            <ComboBoxItem Content="BBD" />
+            <ComboBoxItem Content="BDT" />
+            <ComboBoxItem Content="BGN" />
+            <ComboBoxItem Content="BHD" />
+            <ComboBoxItem Content="BIF" />
+            <ComboBoxItem Content="BMD" />
+            <ComboBoxItem Content="BND" />
+            <ComboBoxItem Content="BOB" />
+            <ComboBoxItem Content="BRL" />
+            <ComboBoxItem Content="BSD" />
+            <ComboBoxItem Content="BTN" />
+            <ComboBoxItem Content="BWP" />
+            <ComboBoxItem Content="BYN" />
+            <ComboBoxItem Content="BZD" />
+            <ComboBoxItem Content="CAD" />
+            <ComboBoxItem Content="CDF" />
+            <ComboBoxItem Content="CHF" />
+            <ComboBoxItem Content="CLP" />
+            <ComboBoxItem Content="CNY" />
+            <ComboBoxItem Content="COP" />
+            <ComboBoxItem Content="CRC" />
+            <ComboBoxItem Content="CUC" />
+            <ComboBoxItem Content="CUP" />
+            <ComboBoxItem Content="CVE" />
+            <ComboBoxItem Content="CZK" />
+            <ComboBoxItem Content="DJF" />
+            <ComboBoxItem Content="DKK" />
+            <ComboBoxItem Content="DOP" />
+            <ComboBoxItem Content="DZD" />
+            <ComboBoxItem Content="EGP" />
+            <ComboBoxItem Content="ERN" />
+            <ComboBoxItem Content="ETB" />
+            <ComboBoxItem Content="EUR" />
+            <ComboBoxItem Content="FJD" />
+            <ComboBoxItem Content="FKP" />
+            <ComboBoxItem Content="GBP" />
+            <ComboBoxItem Content="GEL" />
+            <ComboBoxItem Content="GGP" />
+            <ComboBoxItem Content="GHS" />
+            <ComboBoxItem Content="GIP" />
+            <ComboBoxItem Content="GMD" />
+            <ComboBoxItem Content="GNF" />
+            <ComboBoxItem Content="GTQ" />
+            <ComboBoxItem Content="GYD" />
+            <ComboBoxItem Content="HKD" />
+            <ComboBoxItem Content="HNL" />
+            <ComboBoxItem Content="HRK" />
+            <ComboBoxItem Content="HTG" />
+            <ComboBoxItem Content="HUF" />
+            <ComboBoxItem Content="IDR" />
+            <ComboBoxItem Content="ILS" />
+            <ComboBoxItem Content="IMP" />
+            <ComboBoxItem Content="INR" />
+            <ComboBoxItem Content="IQD" />
+            <ComboBoxItem Content="IRR" />
+            <ComboBoxItem Content="ISK" />
+            <ComboBoxItem Content="JEP" />
+            <ComboBoxItem Content="JMD" />
+            <ComboBoxItem Content="JOD" />
+            <ComboBoxItem Content="JPY" />
+            <ComboBoxItem Content="KES" />
+            <ComboBoxItem Content="KGS" />
+            <ComboBoxItem Content="KHR" />
+            <ComboBoxItem Content="KMF" />
+            <ComboBoxItem Content="KPW" />
+            <ComboBoxItem Content="KRW" />
+            <ComboBoxItem Content="KWD" />
+            <ComboBoxItem Content="KYD" />
+            <ComboBoxItem Content="KZT" />
+            <ComboBoxItem Content="LAK" />
+            <ComboBoxItem Content="LBP" />
+            <ComboBoxItem Content="LKR" />
+            <ComboBoxItem Content="LRD" />
+            <ComboBoxItem Content="LSL" />
+            <ComboBoxItem Content="LYD" />
+            <ComboBoxItem Content="MAD" />
+            <ComboBoxItem Content="MDL" />
+            <ComboBoxItem Content="MGA" />
+            <ComboBoxItem Content="MKD" />
+            <ComboBoxItem Content="MMK" />
+            <ComboBoxItem Content="MNT" />
+            <ComboBoxItem Content="MOP" />
+            <ComboBoxItem Content="MRU" />
+            <ComboBoxItem Content="MUR" />
+            <ComboBoxItem Content="MVR" />
+            <ComboBoxItem Content="MWK" />
+            <ComboBoxItem Content="MXN" />
+            <ComboBoxItem Content="MYR" />
+            <ComboBoxItem Content="MZN" />
+            <ComboBoxItem Content="NAD" />
+            <ComboBoxItem Content="NGN" />
+            <ComboBoxItem Content="NIO" />
+            <ComboBoxItem Content="NOK" />
+            <ComboBoxItem Content="NPR" />
+            <ComboBoxItem Content="NZD" />
+            <ComboBoxItem Content="OMR" />
+            <ComboBoxItem Content="PAB" />
+            <ComboBoxItem Content="PEN" />
+            <ComboBoxItem Content="PGK" />
+            <ComboBoxItem Content="PHP" />
+            <ComboBoxItem Content="PKR" />
+            <ComboBoxItem Content="PLN" />
+            <ComboBoxItem Content="PYG" />
+            <ComboBoxItem Content="QAR" />
+            <ComboBoxItem Content="RON" />
+            <ComboBoxItem Content="RSD" />
+            <ComboBoxItem Content="RUB" />
+            <ComboBoxItem Content="RWF" />
+            <ComboBoxItem Content="SAR" />
+            <ComboBoxItem Content="SBD" />
+            <ComboBoxItem Content="SCR" />
+            <ComboBoxItem Content="SDG" />
+            <ComboBoxItem Content="SEK" />
+            <ComboBoxItem Content="SGD" />
+            <ComboBoxItem Content="SHP" />
+            <ComboBoxItem Content="SLL" />
+            <ComboBoxItem Content="SOS" />
+            <ComboBoxItem Content="SPL" />
+            <ComboBoxItem Content="SRD" />
+            <ComboBoxItem Content="STN" />
+            <ComboBoxItem Content="SVC" />
+            <ComboBoxItem Content="SYP" />
+            <ComboBoxItem Content="SZL" />
+            <ComboBoxItem Content="THB" />
+            <ComboBoxItem Content="TJS" />
+            <ComboBoxItem Content="TMT" />
+            <ComboBoxItem Content="TND" />
+            <ComboBoxItem Content="TOP" />
+            <ComboBoxItem Content="TRY" />
+            <ComboBoxItem Content="TTD" />
+            <ComboBoxItem Content="TVD" />
+            <ComboBoxItem Content="TWD" />
+            <ComboBoxItem Content="TZS" />
+            <ComboBoxItem Content="UAH" />
+            <ComboBoxItem Content="UGX" />
+            <ComboBoxItem Content="UYU" />
+            <ComboBoxItem Content="UZS" />
+            <ComboBoxItem Content="VEF" />
+            <ComboBoxItem Content="VND" />
+            <ComboBoxItem Content="VUV" />
+            <ComboBoxItem Content="WST" />
+            <ComboBoxItem Content="XAF" />
+            <ComboBoxItem Content="XCD" />
+            <ComboBoxItem Content="XDR" />
+            <ComboBoxItem Content="XOF" />
+            <ComboBoxItem Content="XPF" />
+            <ComboBoxItem Content="YER" />
+            <ComboBoxItem Content="ZAR" />
+            <ComboBoxItem Content="ZMW" />
+            <ComboBoxItem Content="ZWD" />
+        </ComboBox>                 
+        <Image HorizontalAlignment="Left" Height="289" VerticalAlignment="Top" Width="389" Source="4달라.png"/>
+        <Button x:Name="btnSearch" Content="Search" HorizontalAlignment="Left" Margin="170,298,0,0" VerticalAlignment="Top" Width="75" Click="BtnSearch_Click"/>
+        <Label Content="Result:" HorizontalAlignment="Left" Margin="6,325,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lblResult" Content="" HorizontalAlignment="Left" Margin="57,325,0,0" VerticalAlignment="Top" Width="70"/>
+        <Label Content="Currency Date:" HorizontalAlignment="Left" Margin="6,356,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lblCurTime" Content="DateTime" HorizontalAlignment="Left" Margin="98,356,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="btnNotice" Content="Notice" HorizontalAlignment="Left" Margin="291,298,0,0" VerticalAlignment="Top" Width="75" Click="BtnNotice_Click"/>
 
     </Grid>
 </Window>
