@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -13,6 +15,8 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
+using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 
 namespace _4USD_CUR
 {
@@ -23,7 +27,8 @@ namespace _4USD_CUR
    
     public partial class MainWindow : Window
     {
-        string sReqStr = "";
+       
+        HttpWebRequest clsRequest;
         public MainWindow()
         {
             InitializeComponent();
@@ -41,10 +46,55 @@ namespace _4USD_CUR
         /// <param name="e"></param>
         private void BtnSearch_Click(object sender, RoutedEventArgs e)
         {
-            string sUrl = "http://api.manana.kr/exchange/rate/";
-            sUrl += "USD/"+ cboCurrency.SelectionBoxItem.ToString() + ".Json";
+            //vals
+            DateTime dateCur;
+            string sName;
+            double nRate;
 
+            //https get
+            string sUrl = "https://api.manana.kr/exchange/rate/";
+            //sUrl += "USD/"+ cboCurrency.SelectionBoxItem.ToString() + ".json";
+            sUrl += cboCurrency.SelectionBoxItem.ToString() + "/USD.json";
 
+            string sRes = "";
+            clsRequest = (HttpWebRequest)WebRequest.Create(sUrl);
+            clsRequest.Method = "GET";
+            clsRequest.Timeout = 30 * 1000; // 30초
+
+            using (HttpWebResponse resp = (HttpWebResponse)clsRequest.GetResponse())
+            {
+                HttpStatusCode status = resp.StatusCode;
+                Console.WriteLine(status);  // 정상이면 "OK"
+
+                Stream respStream = resp.GetResponseStream();
+                using (StreamReader sr = new StreamReader(respStream))
+                {
+                    sRes = sr.ReadToEnd();
+                }
+
+                sRes.Replace("[", "");
+                sRes.Replace("]", "");
+                
+            }
+           
+            try
+            {
+                JArray jarr = JArray.Parse(sRes);
+                
+                dateCur = (DateTime)jarr[0]["date"];
+                sName = jarr[0]["name"].ToString();
+                nRate = Convert.ToDouble(jarr[0]["rate"]);
+                
+                nRate *= 4;
+
+                lblResult.Content = nRate + " "+ cboCurrency.SelectionBoxItem.ToString();
+                lblCurTime.Content = dateCur.ToString("yyyy-MM-dd");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "ERROR");
+            }
+           
         }
 
         private void BtnNotice_Click(object sender, RoutedEventArgs e)
