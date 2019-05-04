@@ -5,7 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:_4USD_CUR"
         mc:Ignorable="d"
-        Title="4딸라" Height="450" Width="395.272" Loaded="Window_Loaded">
+        Title="4딸라" Height="450" Width="395.272" Loaded="Window_Loaded"
+        Icon="Resources/4달라.png">
     <Grid>
         <Label Content="4USD TO...." HorizontalAlignment="Left" Margin="6,294,0,0" VerticalAlignment="Top"/>
         <ComboBox x:Name="cboCurrency" HorizontalAlignment="Left" Margin="98,298,0,0" VerticalAlignment="Top" Width="62" Height="20" SelectedIndex="0">
