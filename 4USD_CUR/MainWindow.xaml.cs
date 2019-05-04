@@ -105,7 +105,7 @@ namespace _4USD_CUR
 
         private void BtnNotice_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("이 프로그램은 4달러를 여러 통화단위로 변환해주는 프로그램 입니다. \n환율정보는 오차가 있을 수 있습니다. \nPowered By pureani.tistory.com", "알림");
+            MessageBox.Show("이 프로그램은 4달러를 여러 통화단위로 변환해주는 프로그램 입니다. \n환율정보는 오차가 있을 수 있습니다.\n만든사람:김태헌(https://github.com/High9round) \n환율 API 출처:https://pureani.tistory.com/4919", "알림");
         }
 
 
