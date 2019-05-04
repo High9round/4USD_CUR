@@ -233,7 +233,8 @@
     <Resource Include="Resources\4달라.png" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Resources\4달라 사운드.wav" />
+    <Resource Include="Resources\sound.wav" />
+    <None Include="4달라 사운드.wav" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

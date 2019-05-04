@@ -18,6 +18,8 @@ using System.Windows.Shapes;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 
+using System.Media;
+
 namespace _4USD_CUR
 {
     /// <summary>
@@ -46,6 +48,10 @@ namespace _4USD_CUR
         /// <param name="e"></param>
         private void BtnSearch_Click(object sender, RoutedEventArgs e)
         {
+            //sound
+            SoundPlayer soundPlayer = new SoundPlayer(Properties.Resources.sound);
+            soundPlayer.Play();
+
             //vals
             DateTime dateCur;
             string sName;
