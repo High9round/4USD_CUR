@@ -55,7 +55,7 @@
     <ApplicationIcon>Resources\icon.ico</ApplicationIcon>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestCertificateThumbprint>878755904A12DF0E5EF9A267E8A3C4B85EEEA58A</ManifestCertificateThumbprint>
+    <ManifestCertificateThumbprint>CD4F8451B3AFAF684516D76C7C2A8D1732FF7819</ManifestCertificateThumbprint>
   </PropertyGroup>
   <PropertyGroup>
     <ManifestKeyFile>
